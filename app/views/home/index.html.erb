@@ -1,0 +1,13 @@
+<h1>Sign In</h1>
+<br>
+<% form_tag log_in_path do %>
+<%=label_tag :email %>
+<%=text_field_tag :email %>
+<%=label_tag :password %>
+<%=password_field_tag :password %>
+<%=submit_tag "Log in" %>
+<%end%>
+
+<br>
+<hr>
+<%= link_to "New User", new_user_path %>
