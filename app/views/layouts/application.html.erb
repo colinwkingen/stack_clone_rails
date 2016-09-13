@@ -9,6 +9,8 @@
   </head>
 
   <body>
+<%= link_to "logout", :controller=> "sessions", :action=> "destroy" %>
+
     <%= yield %>
   </body>
 </html>

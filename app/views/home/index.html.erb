@@ -1,6 +1,6 @@
 <h1>Sign In</h1>
 <br>
-<% form_tag log_in_path do %>
+<%= form_tag log_in_path do %>
 <%=label_tag :email %>
 <%=text_field_tag :email %>
 <%=label_tag :password %>
@@ -8,6 +8,9 @@
 <%=submit_tag "Log in" %>
 <%end%>
 
+<br>
+<%= flash[:alert] %>
+<%= flash[:notice] %>
 <br>
 <hr>
 <%= link_to "New User", new_user_path %>
