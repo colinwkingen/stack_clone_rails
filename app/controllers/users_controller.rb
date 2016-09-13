@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "Greetings, Human."
+      flash[:notice] = " Greetings" + @user.email
       redirect_to questions_path
     else
       flash[:alert] = "Your input was sucky."

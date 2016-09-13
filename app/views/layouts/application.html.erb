@@ -10,7 +10,8 @@
 
   <body>
 <%= link_to "logout", :controller=> "sessions", :action=> "destroy" %>
-
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
     <%= yield %>
   </body>
 </html>

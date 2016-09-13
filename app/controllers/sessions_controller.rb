@@ -3,14 +3,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.authenticate(params[:email].params[:password])
+    @user = User.authenticate(params[:email],params[:password])
     if @user
       flash[:notice] = "You have logged on."
       session[:user_id] = @user.id
       redirect_to questions_path
     else
       flash[:alert] = "Wrong username or password."
-      redirect_to login_path
+      redirect_to log_in_path
     end
   end
 
